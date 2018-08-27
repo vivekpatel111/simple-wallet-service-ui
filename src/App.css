@@ -1,0 +1,19 @@
+.container {
+    padding: 10px;
+}
+
+.container .wallet-id-button {
+    margin-bottom: 7px;
+}
+
+.message-success div {
+    background-color: #43a047;
+}
+
+.message-error div {
+    background-color: #d32f2f;
+}
+
+.wallet-info-card .wallet-info-action > button {
+    width: 100%;
+}
