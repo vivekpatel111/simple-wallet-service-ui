@@ -7,6 +7,7 @@ import TableRow from "../../../node_modules/@material-ui/core/TableRow/TableRow"
 import TableCell from "../../../node_modules/@material-ui/core/TableCell/TableCell";
 import Paper from "../../../node_modules/@material-ui/core/Paper/Paper";
 import Button from "@material-ui/core/Button";
+import TableHead from "../../../node_modules/@material-ui/core/TableHead/TableHead";
 
 
 class Transactions extends Component {
@@ -27,7 +28,7 @@ class Transactions extends Component {
         return (
             <Paper className="wallet-info-card">
                 <Table className="wallet-info-table">
-                    <TableBody>
+                    <TableHead>
                         <TableRow>
                             <TableCell>
                                 <Typography component="p">
@@ -62,9 +63,11 @@ class Transactions extends Component {
                             <TableCell>
                             </TableCell>
                         </TableRow>
+                    </TableHead>
+                    <TableBody>
                         {
                             transactions.map((txn) => (
-                                <TableRow>
+                                <TableRow key={txn.id}>
                                     <TableCell>
                                         <Typography component="p">
                                             {txn.id}
